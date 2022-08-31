@@ -48,35 +48,33 @@ class ImageWaterMarkSettingModel {
   ///默认100
   int divided;
 
-  double? screenWidth;
-
-  ImageWaterMarkSettingModel(
-      {this.type = WaterMarkType.TEXT,
-      this.text = '',
-      this.textStyle,
-      this.radians = 0,
-      this.asset,
-      this.dx = 0,
-      this.dy = 0,
-      this.divided = 100,
-      this.textWidth = 300,
-      this.lightColor = const Color.fromRGBO(255, 255, 255, 0.25),
-      this.darkColor = const Color.fromRGBO(0, 0, 0, 0.25),
-      this.fontSize = 14,
-      this.screenWidth});
+  ImageWaterMarkSettingModel({
+    this.type = WaterMarkType.TEXT,
+    this.text = '',
+    this.textStyle,
+    this.radians = 0,
+    this.asset,
+    this.dx = 0,
+    this.dy = 0,
+    this.divided = 100,
+    this.textWidth = 300,
+    this.lightColor = const Color.fromRGBO(255, 255, 255, 0.25),
+    this.darkColor = const Color.fromRGBO(0, 0, 0, 0.25),
+    this.fontSize = 14,
+  });
 
   factory ImageWaterMarkSettingModel.fromJson(Map<String, dynamic> json) {
     return ImageWaterMarkSettingModel(
-        type: json['type'],
-        text: json['text'],
-        textStyle: json['textStyle'],
-        radians: json['radians'],
-        asset: json['path'],
-        dx: json['dx'],
-        dy: json['dy'],
-        divided: json['divided'],
-        textWidth: json['textWidth'],
-        screenWidth: json['screenWidth']);
+      type: json['type'],
+      text: json['text'],
+      textStyle: json['textStyle'],
+      radians: json['radians'],
+      asset: json['path'],
+      dx: json['dx'],
+      dy: json['dy'],
+      divided: json['divided'],
+      textWidth: json['textWidth'],
+    );
   }
 
   Map<String, dynamic> toJson(ImageWaterMarkSettingModel model) =>
@@ -90,7 +88,6 @@ class ImageWaterMarkSettingModel {
         'dy': model.dy,
         'divided': model.divided,
         'textWidth': model.textWidth,
-        'screenWidth': model.screenWidth
       };
 }
 

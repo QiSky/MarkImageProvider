@@ -8,7 +8,7 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter_cache_manager/flutter_cache_manager.dart';
 import 'package:palette_generator/palette_generator.dart';
 
-import 'ImageWaterMarkSettingModel.dart';
+import 'image_watermark_setting_model.dart';
 
 ///
 /// * @ProjectName: combination_cached_network_image
